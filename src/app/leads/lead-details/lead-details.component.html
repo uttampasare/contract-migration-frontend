@@ -1,0 +1,60 @@
+<!-- <div>
+    <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Opportunity
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+          <mat-form-field>
+            <input matInput placeholder="Customer ID">
+          </mat-form-field>
+      
+          <mat-form-field>
+            <input matInput placeholder="Quote ID">
+          </mat-form-field>
+    
+          <mat-form-field>
+              <mat-label>Campaign Name</mat-label>
+              <input matInput >
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Migration Status</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let mat of migrationStatuses" [value]="mat">
+                    {{mat}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+    
+        </mat-expansion-panel>
+       
+      </mat-accordion>
+</div> -->
+
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link active" (click)='loadLeadDetails("INTERACTIONS")'>INTERACTIONS</a>
+    </li>
+    <li class="nav-item">
+            <a class="nav-link" (click)='loadLeadDetails("RECPRODUCTS")'>REC PRODUCTS</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)='loadLeadDetails("PRODUCTSTATS")'>PRODUCT STATS</a>
+    </li>
+</ul>
+
+<div [ngSwitch]="operation">
+  <div *ngSwitchCase="'INTERACTIONS'">
+      <lead-interactions ></lead-interactions>
+  </div>
+  <div *ngSwitchCase="'RECPRODUCTS'">
+    <lead-product-stats></lead-product-stats>
+  </div>
+  <div *ngSwitchCase="'PRODUCTSTATS'">
+    <lead-recommanded-produtcs></lead-recommanded-produtcs>
+  </div>
+</div>
+

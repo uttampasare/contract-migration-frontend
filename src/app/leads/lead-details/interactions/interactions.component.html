@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+       <div class="col-md-12 shadow p-3 mb-5 bg-white rounded" >
+           <table class="table table-bordered">
+              <thead class="default-table-heading">
+                 <th>INTERACTION TYPE</th>
+                 <th>INBOUND / OUTBOUND</th>
+                 <th>DATE OF INTERACTION</th>
+                 <th>INTERACTION DETAIL</th>
+               </thead>
+               <tbody class="default-table-content">
+                  <tr *ngFor='let prod of interactions'>
+                      <th>
+                        {{ prod.type }}
+                      </th>
+                      <th>
+                        {{ prod.inout }}
+                      </th>
+                      <th>
+                        {{ prod.date }}
+                      </th>
+                      <th>
+                        {{ prod.details }}
+                      </th>
+                    </tr>
+               </tbody>
+             </table>
+       </div>
+</div>

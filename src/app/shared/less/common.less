@@ -1,0 +1,26 @@
+@import 'colors.less';
+
+.default-font{
+    font-family: 'Century Gothic Bold', 'Century Gothic Regular', 'Century Gothic';
+    font-style: normal;
+    color: @default_color;
+    font-weight: bold;
+}
+
+h2, h3, h5{
+    .default-font();
+}
+
+.default-table-heading{
+    .default-font();
+}
+
+.default-table-content{
+    font-family: 'Century Gothic';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: @table_content;
+    text-align: center;
+    line-height: normal;
+}

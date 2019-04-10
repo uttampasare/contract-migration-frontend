@@ -1,0 +1,24 @@
+<div class="">
+    <div class="row">
+      <div class="col-md-6 shadow p-3 mb-5 bg-white rounded" >
+        <h3>OPPORTUNITIES</h3>
+        <table class="table table-bordered">
+          <tbody>
+              <tr *ngFor='let oppo of opportunities'>
+                  <th>
+                    <a>{{ oppo.id }}</a> 
+                  </th>
+                  <th>
+                      {{ oppo.name }}
+                    </th>
+                    <th>
+                        {{ oppo.address }}
+                      </th>
+          </tbody>
+        </table>
+      </div>
+      <!-- <div class="col-md-6 shadow p-3 mb-5 bg-white rounded">
+          <lead-products [products]='opportunities'></lead-products>
+      </div> -->
+    </div>
+  </div>

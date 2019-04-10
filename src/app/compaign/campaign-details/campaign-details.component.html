@@ -1,0 +1,45 @@
+<!-- <ul class="nav flex-column">
+    <li class="nav-item">
+        <a class="nav-link active" routerLink='campaign-leads'>Leads</a>
+    </li>
+    <li class="nav-item">
+            <a class="nav-link" routerLink='campaign-opportunity'>Opportunity</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink='campaign-quotes'>Quotes</a>
+    </li>
+</ul>
+
+<router-outlet></router-outlet> -->
+
+<ul class="nav flex-column">
+    <li class="nav-item">
+        <a class="nav-link active" (click)='loadCampaignDetails("Dashboard")'>Dashboard</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" (click)='loadCampaignDetails("Leads")'>Leads</a>
+    </li>
+    <li class="nav-item">
+            <a class="nav-link" (click)='loadCampaignDetails("Opportunity")'>Opportunity</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)='loadCampaignDetails("Quotes")'>Quotes</a>
+    </li>
+</ul>
+
+<div [ngSwitch]="operation">
+        <div *ngSwitchCase="'Dashboard'">
+            <app-dashboard></app-dashboard>
+        </div>
+        <div *ngSwitchCase="'Leads'">
+            <app-campaign-leads></app-campaign-leads>
+        </div>
+        <div *ngSwitchCase="'Opportunity'">
+            <app-campaign-opportunity></app-campaign-opportunity>
+        </div>
+        <div *ngSwitchCase="'Quotes'">
+            <app-campaign-opportunity></app-campaign-opportunity>
+        </div>
+</div>
+          
+          

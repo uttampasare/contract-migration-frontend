@@ -1,0 +1,27 @@
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+    <h2>Leads</h2>
+  <table class="table table-bordered">
+    <thead class="default-table-heading">
+      <tr>
+        <th *ngFor='let c of columns'>
+          {{ c }}
+        </th>
+      
+      </tr>
+    </thead>
+    <tbody class="default-table-content">
+        <tr *ngFor='let d of data'>
+            <th>
+               <a  [routerLink]="['/leads/lead-details', d.id]">{{ d.id }}</a> 
+            </th>
+            <th>
+                {{ d.col1 }}
+              </th>
+              <th>
+                  {{ d.col2 }}
+                </th>
+    </tbody>
+  </table>
+</div>
+

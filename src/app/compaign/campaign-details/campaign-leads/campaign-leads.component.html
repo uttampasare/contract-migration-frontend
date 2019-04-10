@@ -1,0 +1,36 @@
+<div class="">
+     <div class="row">
+        <div class="col-md-6 shadow p-3 mb-5 bg-white rounded" >
+            <h3>LEADS</h3>
+            <table class="table table-bordered">
+               <thead class="default-table-heading">
+                  <th>CUST ID</th>
+                  <th>CUSTOMER NAME</th>
+                  <th>BILLING ADDRESS</th>
+                </thead>
+                <tbody class="default-table-content">
+                    <tr *ngFor='let lead of leads'>
+                        <th>
+                          <a (click)='setCustomer(lead.id)'>{{ lead.id }}</a> 
+                        </th>
+                        <th>
+                            {{ lead.name }}
+                          </th>
+                          <th>
+                              {{ lead.address }}
+                            </th>
+                </tbody>
+              </table>
+        </div>
+        <div class="col-md-6 shadow p-3 mb-5 bg-white rounded">
+            <lead-products></lead-products>
+        </div>
+    </div>
+
+    <div class="row float-right">
+      <button class="btn btn-info">Modify Criteria</button>
+    </div>
+  </div>
+
+
+  

@@ -1,0 +1,31 @@
+<div>
+    <h5>EXISTING PRODUCT LINES</h5>
+    <div *ngIf="!products">
+      <span>No products are available</span>
+    </div>
+    <div *ngIf="products" class="shadow p-3 mb-5 bg-white rounded">
+      <table class="table">
+          <tbody class="default-table-content">
+              <tr *ngFor='let prod of products' class="custom-row">
+                  <th>
+                    {{ prod.name }}
+                  </th>
+                  <th>
+                    {{ prod.offer }}
+                  </th>
+                  <th>
+                    {{ prod.customerSince }}
+                  </th>
+                  <th>
+                    {{ prod.averageBilling }}
+                  </th>
+                  <th>
+                    {{ prod.usage }}
+                  </th>
+                  <th>
+                    {{ prod.margin }}
+                  </th>
+          </tbody>
+        </table>
+    </div>
+  </div>

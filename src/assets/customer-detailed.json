@@ -1,0 +1,115 @@
+[
+    {
+        "id" : "3232334",
+        "name" : "Bank of America",
+        "address" : "Vista Hermosa Park, NY",
+        "products" : [
+            {
+                "name" : "Internet",
+                "offer" : "1M Copper",
+                "customerSince" : "2.68 Years",
+                "averageBilling" : "$ 58.29",
+                "usage" : "28.79 GB/Mon",
+                "margin" : "3%"
+            },
+            {
+                "name" : "Mobile",
+                "offer" : "Famil Pack",
+                "customerSince" : "2.68 Years",
+                "averageBilling" : "$ 58.29",
+                "usage" : "45.9 GB/Mon",
+                "margin" : "5%"
+            },
+            {
+                "name" : "Phone",
+                "offer" : "1M Copper",
+                "customerSince" : "2.68 Years",
+                "averageBilling" : "$ 58.29",
+                "usage" : "45.9 GB/Mon",
+                "margin" : "5%"
+            }
+        ],
+        "interactions" : [
+            {
+                "type": "e-Mail",
+                "inout": "Inbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+          },
+            {
+                "type": " Phone Call",
+                "inout": "Outbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+            },
+            {
+                "type": "e-Mail",
+                "inout": "Inbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+            }
+        ]
+    },
+    {
+        "id" : "2344323",
+        "name" : "Foot Locker",
+        "address" : "1460 Broadway, New York, NY",
+        "products" : [
+            {
+                "name" : "Internet",
+                "offer" : "1M Copper",
+                "customerSince" : "2.68 Years",
+                "averageBilling" : "$ 58.29",
+                "usage" : "28.79 GB/Mon",
+                "margin" : "3%"
+            },
+            {
+                "name" : "Mobile",
+                "offer" : "Famil Pack",
+                "customerSince" : "2.68 Years",
+                "averageBilling" : "$ 58.29",
+                "usage" : "45.9 GB/Mon",
+                "margin" : "5%"
+            }
+        ],
+        "interactions" : [
+            {
+                "type": "e-Mail",
+                "inout": "Inbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+          }
+        ]
+    },
+    {
+        "id" : "6578665",
+        "name" : "National Library",
+        "address" : "Pershing Square, NY",
+        "products" : [
+            {
+                "name" : "Internet",
+                "offer" : "1M Copper",
+                "customerSince" : "2.68 Years",
+                "averageBilling" : "$ 58.29",
+                "usage" : "28.79 GB/Mon",
+                "margin" : "3%"
+            }
+        ],
+        "interactions" : [
+            {
+                "type": "e-Mail",
+                "inout": "Inbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+          },
+            {
+                "type": "e-Mail",
+                "inout": "Inbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+            }
+        ]
+    }
+]
+
+
