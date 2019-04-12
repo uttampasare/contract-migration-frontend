@@ -1,7 +1,8 @@
 @import 'colors.less';
+@import 'fonts.less';
 
 .default-font{
-    font-family: 'Century Gothic Bold', 'Century Gothic Regular', 'Century Gothic';
+    font-family: @font_family;
     font-style: normal;
     color: @default_color;
     font-weight: bold;
@@ -16,11 +17,19 @@ h2, h3, h5{
 }
 
 .default-table-content{
-    font-family: 'Century Gothic';
+    font-family: @font_family;
     font-weight: 400;
     font-style: normal;
     font-size: 13px;
     color: @table_content;
     text-align: center;
     line-height: normal;
+}
+
+.color-while{
+    color:@color_font;
+}
+
+.font-weight-bold{
+    font-weight: bold;
 }

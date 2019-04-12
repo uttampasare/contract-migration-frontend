@@ -11,15 +11,15 @@
       </tr>
     </thead>
     <tbody class="default-table-content">
-        <tr *ngFor='let d of data'>
+        <tr *ngFor='let l of leads'>
             <th>
-               <a  [routerLink]="['/leads/lead-details', d.id]">{{ d.id }}</a> 
+               <a  [routerLink]="['/leads/lead-details', l.id]">{{ l.id }}</a> 
             </th>
             <th>
-                {{ d.col1 }}
+                {{ l.col1 }}
               </th>
               <th>
-                  {{ d.col2 }}
+                  {{ l.col2 }}
                 </th>
     </tbody>
   </table>

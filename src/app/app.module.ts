@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CampaignModule } from './compaign/campaign.module';
 import { CommonModule } from '@angular/common';
+import { EmailViewModalComponent } from './leads/lead-details/email-view-modal/email-view-modal.component';
 
 @NgModule({
   declarations: [

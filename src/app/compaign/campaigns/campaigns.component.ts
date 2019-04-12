@@ -17,9 +17,7 @@ export class CampaignsComponent implements OnInit {
     this.columns = this.campaignService.getColumns();
     this.campaignService.getCampaigns().subscribe(res => {
       this.data = res;
-      console.log(this.data);
     });
-
   }
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'campaign-details',
@@ -10,11 +9,10 @@ export class CampaignDetailsComponent implements OnInit {
 
   campaignId : string;
   operation : string = 'Dashboard';
-  constructor(private route: ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit() {
-    this.campaignId = this.route.snapshot.paramMap.get('id');
-    console.log(this.campaignId);
+
   }
 
   

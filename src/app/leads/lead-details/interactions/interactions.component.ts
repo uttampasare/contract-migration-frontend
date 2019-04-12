@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LeadService } from '../../service/lead.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { EmailViewModalComponent } from '../email-view-modal/email-view-modal.component';
+import { Interaction } from 'src/app/model/interaction.model';
 
 @Component({
   selector: 'lead-interactions',
@@ -8,14 +11,19 @@ import { LeadService } from '../../service/lead.service';
 })
 export class InteractionsComponent implements OnInit {
 
-  interactions : any[];
-  constructor(private leadService : LeadService) { }
+  interactions : Interaction[];
+  constructor(private leadService : LeadService, private modal: NgbModal) { }
 
   ngOnInit() {
-    this.leadService.showInteractions();
-    this.leadService.getInteractions().subscribe( interactions => {
-      this.interactions = interactions;
+    this.leadService.getInteractionsByLeadId();
+    this.leadService.getInteractions().subscribe( inters => {
+      this.interactions = inters;
     });
+  }
+
+  viewEmail() {
+    let cfRef = this.modal.open(EmailViewModalComponent);
+    cfRef.componentInstance.messageBody = "This is email message";
   }
 
 }

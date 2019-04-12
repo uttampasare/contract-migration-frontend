@@ -2,16 +2,58 @@
 	{
 		"id": "LEAD001",
 		"col1": "test5555",
-		"col2": "1244443"
+		"col2": "1244443",
+		"interactions" : [
+            {
+                "type": "e-Mail",
+                "inout": "Inbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+          },
+            {
+                "type": "e-Mail",
+                "inout": "Inbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+            }
+        ]
   },
   {
 		"id": "LEAD002",
 		"col1": "test5555",
-		"col2": "1244443"
+		"col2": "1244443",
+        "interactions" : [
+            {
+                "type": "e-Mail",
+                "inout": "Inbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+          }
+        ]
   },
   {
 		"id": "LEAD003",
 		"col1": "test5555",
-		"col2": "1244443"
+		"col2": "1244443",
+        "interactions" : [
+            {
+                "type": "e-Mail",
+                "inout": "Inbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+          },
+            {
+                "type": " Phone Call",
+                "inout": "Outbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+            },
+            {
+                "type": "e-Mail",
+                "inout": "Inbound",
+                "date": "17-Feb-2019 13:00:00",
+                "details" : "Customer wants to migrate his Internet conn.."
+            }
+        ]
   }
 ]

@@ -3,13 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { SharedService } from 'src/app/shared/shared/shared.service';
 import { Interaction } from 'src/app/model/interaction.model';
+import { Lead } from 'src/app/model/lead.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LeadService {
 
-  subject = new Subject<Interaction[]>();
+  leadIdSubject = new Subject();
+  interactionsSubject = new Subject<Interaction[]>();
   headers: string[];
   constructor(private http : HttpClient, private sharedService : SharedService) { }
 
@@ -17,26 +19,35 @@ export class LeadService {
     return ["Lead ID", "Customer Name", "Service Address"];
   }
 
-  getData(): Observable<any>{
-    return this.http.get('assets/leads.json');
+  getLeads(): Observable<Lead[]>{
+    return this.http.get<Lead[]>('assets/leads.json');
+  }
+  
+  setLeadId(leadId : string){
+    this.leadIdSubject.next(leadId);
   }
 
-  setInteractions(interactions : Interaction[]){
-    this.subject.next(interactions);
+  getLeadId() : Observable<any>{
+    return this.leadIdSubject.asObservable();
+  }
+
+  setInteractions(inters : Interaction[]){
+    this.interactionsSubject.next(inters);
   }
 
   getInteractions() : Observable<Interaction[]>{
-    return this.subject.asObservable();
+    return this.interactionsSubject.asObservable();
   }
 
-  showInteractions(){
-    this.sharedService.setCustomerId('2344323');
-    this.sharedService.getCustomerId().subscribe( customerId => {
-        this.sharedService.getCustomers().subscribe( customers => {
-          customers.filter( customer => customer.id == customerId).map( c =>{
-            this.setInteractions(c.interactions);
-          });
+  getInteractionsByLeadId(){
+    this.getLeadId().subscribe(leadId => {
+      this.getLeads().subscribe( lead => {
+        lead.filter(
+          l => l.id === leadId
+        ).map( fLead => {
+          this.setInteractions(fLead.interactions);
         });
+      });
     });
   }
  

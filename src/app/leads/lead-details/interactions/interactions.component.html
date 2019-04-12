@@ -11,7 +11,15 @@
                <tbody class="default-table-content">
                   <tr *ngFor='let prod of interactions'>
                       <th>
-                        {{ prod.type }}
+                        <div [ngSwitch]='prod.type'>
+                            <span *ngSwitchCase='"e-Mail"'>
+                              <a (click)='viewEmail()'> {{ prod.type }} </a>
+                            </span>
+                            <span *ngSwitchDefault>
+                                {{ prod.type }}
+                            </span>
+                        </div>
+                       
                       </th>
                       <th>
                         {{ prod.inout }}

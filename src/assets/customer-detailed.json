@@ -28,26 +28,6 @@
                 "usage" : "45.9 GB/Mon",
                 "margin" : "5%"
             }
-        ],
-        "interactions" : [
-            {
-                "type": "e-Mail",
-                "inout": "Inbound",
-                "date": "17-Feb-2019 13:00:00",
-                "details" : "Customer wants to migrate his Internet conn.."
-          },
-            {
-                "type": " Phone Call",
-                "inout": "Outbound",
-                "date": "17-Feb-2019 13:00:00",
-                "details" : "Customer wants to migrate his Internet conn.."
-            },
-            {
-                "type": "e-Mail",
-                "inout": "Inbound",
-                "date": "17-Feb-2019 13:00:00",
-                "details" : "Customer wants to migrate his Internet conn.."
-            }
         ]
     },
     {
@@ -71,14 +51,6 @@
                 "usage" : "45.9 GB/Mon",
                 "margin" : "5%"
             }
-        ],
-        "interactions" : [
-            {
-                "type": "e-Mail",
-                "inout": "Inbound",
-                "date": "17-Feb-2019 13:00:00",
-                "details" : "Customer wants to migrate his Internet conn.."
-          }
         ]
     },
     {
@@ -94,21 +66,7 @@
                 "usage" : "28.79 GB/Mon",
                 "margin" : "3%"
             }
-        ],
-        "interactions" : [
-            {
-                "type": "e-Mail",
-                "inout": "Inbound",
-                "date": "17-Feb-2019 13:00:00",
-                "details" : "Customer wants to migrate his Internet conn.."
-          },
-            {
-                "type": "e-Mail",
-                "inout": "Inbound",
-                "date": "17-Feb-2019 13:00:00",
-                "details" : "Customer wants to migrate his Internet conn.."
-            }
-        ]
+        ]        
     }
 ]
 

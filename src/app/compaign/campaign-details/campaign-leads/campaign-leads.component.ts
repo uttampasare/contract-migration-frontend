@@ -3,6 +3,7 @@ import { SharedService } from 'src/app/shared/shared/shared.service';
 import { Lead } from 'src/app/model/lead.model';
 import { Product } from 'src/app/model/product.model';
 import { CampaignService } from '../../service/campaign.service';
+import { Customer } from 'src/app/model/customer.model';
 
 @Component({
   selector: 'app-campaign-leads',
@@ -11,7 +12,7 @@ import { CampaignService } from '../../service/campaign.service';
 })
 export class CampaignLeadsComponent implements OnInit {
 
-  leads : Lead[];
+  leads : Customer[];
   products : Product[];
   
   constructor(private sharedService : SharedService, 

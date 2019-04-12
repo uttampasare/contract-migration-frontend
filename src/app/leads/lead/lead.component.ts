@@ -10,14 +10,13 @@ import { Lead } from 'src/app/model/lead.model';
 export class LeadComponent implements OnInit {
 
   columns : string[];
-  data : any[] = [];
+  leads : Lead[] = [];
   constructor(private leadService : LeadService) { }
 
   ngOnInit() {
     this.columns = this.leadService.getColumns();
-    this.leadService.getData().subscribe(res => {
-      this.data = res;
-      console.log(this.data);
+    this.leadService.getLeads().subscribe(leads => {
+      this.leads = leads;
     });
   }
 
